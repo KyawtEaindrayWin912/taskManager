@@ -1,5 +1,3 @@
-
-````markdown
 # 🔧 Task Manager - Backend
 
 This is the **backend** of the Task Manager App built with **Node.js**, **Express**, **Prisma ORM**, and **SQLite**. It handles user authentication (JWT) and task CRUD operations through a RESTful API.
@@ -115,8 +113,7 @@ task-backend/
 
 ---
 
-```
 
-✅ This format will render correctly on GitHub with proper spacing, syntax highlighting, and Markdown styling. Let me know if you want to include images, `.env.example`, or deployment info next!
-```
+
+
 
