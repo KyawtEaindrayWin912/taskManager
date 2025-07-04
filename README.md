@@ -1,84 +1,111 @@
-# 📝 Task Manager App
+# 📝 Task Manager - Monorepo
 
-A full-stack Task Manager / To-Do App built with:
-
-- 🧠 **React + MUI (frontend)**
-- ⚙️ **Express.js + Prisma + SQLite (backend)**
-- 🔒 User authentication with JWT
-- ✅ Features like search, sort, filter, pagination, dark mode, and more!
+This is the main repository for the **Task Manager** project, containing both the backend (Node.js/Express/Prisma) and frontend (React/MUI) applications.
 
 ---
 
-## 🚀 Features
+## 🚀 Project Overview
 
-- 🧑‍💼 User Registration & Login
-- ✅ Create, Edit, Delete tasks
-- 📅 Set deadlines
-- 🔍 Search, Sort, and Filter tasks
-- 📊 Pagination (e.g. 1–5 of 18 tasks)
-- 🌙 Dark/Light Mode toggle
-- 🔐 JWT Authentication (with `Authorization` headers)
-- 💾 "Remember Me" & "Show Password"
-- ⚠️ Error handling + loading spinners
+- **Backend:** RESTful API server with JWT authentication, SQLite database via Prisma ORM, and secure password hashing.
+- **Frontend:** Modern React SPA styled with Material UI (MUI), featuring user auth, robust task management, and a responsive UI.
 
 ---
 
-## 🧩 Tech Stack
+## 📂 Repository Structure
 
-| Layer     | Stack                                 |
-|-----------|----------------------------------------|
-| Frontend  | React + Vite + Material UI (MUI)       |
-| Backend   | Express.js + Prisma ORM                |
-| Database  | SQLite                                 |
-| Auth      | JWT + bcryptjs                         |
+```
+taskManager/
+│
+├── task-backend/     # Backend server (Express/Prisma/SQLite)
+│   └── README.md
+│
+├── task-frontend/    # Frontend SPA (React/MUI)
+│   └── README.md
+│
+└── README.md         # This file
+```
 
 ---
 
-## 🛠 Installation
+## 📦 Quick Start
 
-### 1. Clone the project
+### 1. Clone the repo
 
 ```bash
-git clone https://github.com/KyawtEaindrayWin912/taskManager
+git clone https://github.com/your-username/taskManager.git
 cd taskManager
+```
 
-### 2. Install backend dependencies
+---
+
+### 2. Setup Backend
+
+See [task-backend/README.md](./task-backend/README.md) for full details.
+
+<details>
+<summary>Quick Start</summary>
 
 ```bash
 cd task-backend
 npm install
-
-#### 3. Set up the database
-
-```bash
+# Setup .env (see sample in backend README)
 npx prisma migrate dev --name init
-
-### 4.Start backend
-
-```bash
+npx prisma generate
 node index.js
-# or if using nodemon
+# or for development
 npx nodemon index.js
+```
+</details>
 
-### 5. Install frontend dependencies
+---
+
+### 3. Setup Frontend
+
+See [task-frontend/README.md](./task-frontend/README.md) for full details.
+
+<details>
+<summary>Quick Start</summary>
 
 ```bash
 cd task-frontend
 npm install
-npm start
+npm run dev
+```
 
-### 🧪 API Testing
-Use Postman or Thunder Client with headers:
-Authorization: Bearer YOUR_JWT_TOKEN
+Open [http://localhost:5173](http://localhost:5173) (or whichever port is shown).
+</details>
 
-👩‍💻 Author
-Kyawt Eaindray Win
+---
 
-💼 Final-year ICT student
+## ⚙️ Configuration
 
-🎯 Interested in Full Stack & AI
+- **Backend API URL:** The frontend expects the backend at `http://localhost:8080`. Change `/src/services/api.js` in the frontend if your backend runs elsewhere.
 
-🌐 GitHub Profile
+---
 
+## 🌟 Features
 
+- User registration and JWT-based login.
+- Secure, protected task API endpoints.
+- Task CRUD: create, view, edit, delete.
+- Search, filter, sorting, and pagination.
+- Responsive, modern UI with light/dark mode.
 
+---
+
+## 🧪 Testing
+
+- Test backend endpoints with Postman/Thunder Client (`Authorization: Bearer <token>` header required).
+- Use the web app for full workflow: Register → Login → Dashboard.
+
+---
+
+## 📜 License
+
+MIT
+
+---
+
+## 📚 More
+
+See the [task-backend](./task-backend/README.md) and [task-frontend](./task-frontend/README.md) READMEs for in-depth setup and usage.
